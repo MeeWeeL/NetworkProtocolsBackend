@@ -1,0 +1,12 @@
+services:
+  network-protocols-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: network-protocols-backend
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+    environment:
+      PORT: 8080
+      GRPC_PORT: 9090
